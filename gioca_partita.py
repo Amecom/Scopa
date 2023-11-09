@@ -2,9 +2,10 @@
 from typing import Any
 import libscopa
 
-# importo solo la classe
+# importo le classi dei giocatori che si sfidano
 from scopa_engine import ScopaEngineBase
 from scopa_engine_human import ScopaEngineHuman
+
 ENABLE_DEBUG = True
 
 # Creo due istanze di ScopaEngineBase (i giocatrori)
