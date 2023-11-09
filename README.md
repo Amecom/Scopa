@@ -1,14 +1,11 @@
-**Questo progetto è stato sviluppato durante un corso per FullStack developers che ho tenuto nel 2022 per introdurre le classi ed ereditarietà.
-
-Dato lo scopo puramente didattico si è scelto di utilizzare una nomenclatura delle variabili e dei metodi in lingua italiana.**
-
-
-
 # Gioco della scopa
+
+**Questo progetto è stato sviluppato durante un corso per FullStack developers che ho tenuto nel 2022 per introdurre le classi ed ereditarietà. Dato lo scopo puramente didattico si è scelto di utilizzare una nomenclatura delle variabili e dei metodi in lingua italiana.**
+
 
 Scopo del progetto:
  
- - creare una classe giocatore base di un giocatore di scopa (scopa_engine.py) (definire i metodi di gioco).
+ - creare una classe giocatore base di un giocatore di scopa (scopa_engine.py) e definire i metodi di gioco.
  - creare un orchestrator per permettere a 2 giocatori di sfidarsi (gioca_partita.py).
  - sviluppare classi di giocatori con strategie migliori rispetto la classe base.
 
