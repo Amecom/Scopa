@@ -26,28 +26,27 @@ La classe giocatore base (scopa_engine.py) definisce i metodi di comunicazione t
 
 ## Metodi principali per la comunicazione con l'orchestrator (da non sovrascivere):
 
-- inizia_partita() -> None: permette di inizializzare le variabili di gioco
-- fine_partita() -> str: calcola il punteggio sia del giocatore che dell'avversario per stabilire chi ha vinto e restituisce un messaggio sulla base del risultato.
-- prendi_carta(carta) -> None: permette al giocatore di ricevere una carta dal mazziere / orchestrator.
-- gioca_carta() -> carta: chiede al giocatore di giocare un carta tra quelle in suo possesso.
-- scegli_presa(possibili_prese) -> int: permettere al giocatore, quando con una carta giocata sono possibili più prese, di indicare quale presa si preferisce fare.
-- prendi_carte_rimanenti(carte) -> None: permette al giocatore di raccogliere le carte rimaste sul tavolo a fine partita.
-- info_carte_rimanenti_ad_avversario(carte) -> None: informa il giocatore sulle carte rimaste sul tavolo prese dall'avversario.
-- info_mossa_avversario(carta_giocata, carte_prese): informa il giocatore sulla carta giocata dall'avversario e sulle carte prese dal tavolo.
+- **inizia_partita**() -> None: permette di inizializzare le variabili di gioco
+- **fine_partita**() -> str: calcola il punteggio sia del giocatore che dell'avversario per stabilire chi ha vinto e restituisce un messaggio sulla base del risultato.
+- **prendi_carta**(carta) -> None: permette al giocatore di ricevere una carta dal mazziere / orchestrator.
+- **gioca_carta**() -> carta: chiede al giocatore di giocare un carta tra quelle in suo possesso.
+- **scegli_presa**(possibili_prese) -> int: permettere al giocatore, quando con una carta giocata sono possibili più prese, di indicare quale presa si preferisce fare.
+- **prendi_carte_rimanenti**(carte) -> None: permette al giocatore di raccogliere le carte rimaste sul tavolo a fine partita.
+- **info_carte_rimanenti_ad_avversario**(carte) -> None: informa il giocatore sulle carte rimaste sul tavolo prese dall'avversario.
+- **info_mossa_avversario**(carta_giocata, carte_prese): informa il giocatore sulla carta giocata dall'avversario e sulle carte prese dal tavolo.
 
 ## Metodi con logiche di scelta (sovrascrivili):
 
-- metodo_gioca_carta() -> carta: definisce la logica di scelta della carta da giocare (in questo caso casuale).
-- metodo_scegli_presa(possibili_prese) -> int: definisce la logica di scelta sulle carte da prendere dal tavolo in caso siano possibili piu' opzioni di presa (in questo caso casuale).
-
+- **logica_gioca_carta**() -> carta: definisce la logica di scelta della carta da giocare (in questo caso casuale).
+- **logica_scegli_presa**(possibili_prese) -> int: definisce la logica di scelta sulle carte da prendere dal tavolo in caso siano possibili piu' opzioni di presa (in questo caso casuale).
 
 
 # Classi giocatori avanzate
 
 Definita la classe giocatore base è possibile creare altri modelli di giocatore ridefinendo semplicemente i metodi:
 
-- metodo_gioca_carta()
-- metodo_scegli_presa(possibili_prese)
+- logica_gioca_carta()
+- logica_scegli_presa(possibili_prese)
 
 Ogni classe giocatore può anche personalizzare i vari messaggi di gioco come:
 

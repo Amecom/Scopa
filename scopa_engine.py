@@ -121,7 +121,7 @@ class ScopaEngineBase:
         if self.sto_giocondo_per_primo is None:
             self.sto_giocondo_per_primo = len(self.carte_sul_tavolo) == libscopa.CARTE_SUL_TAVOLO_SMAZZATA
 
-        carta_da_giocare = self.metodo_gioca_carta()
+        carta_da_giocare = self.logica_gioca_carta()
 
         indice_carta = self.carte_in_mano.index(carta_da_giocare)
         self.carte_in_mano.pop(indice_carta)
@@ -156,7 +156,7 @@ class ScopaEngineBase:
         if len(possibili_prese) == 1:
             indice_presa_scelta = 0
         else:
-            indice_presa_scelta = self.metodo_scegli_presa(possibili_prese)
+            indice_presa_scelta = self.logica_scegli_presa(possibili_prese)
 
         # rimuovo dal tavolo le carte prese
         carte_prese = list(possibili_prese[indice_presa_scelta])
@@ -239,7 +239,7 @@ class ScopaEngineBase:
 
     # METODI SOVRASCRIVIBILI DI BASE
 
-    def metodo_gioca_carta(self) -> Carta:
+    def logica_gioca_carta(self) -> Carta:
         """Metodo semplificato per selezionare la carta da giocare
         che può essere sovrascritto.
         Tenere la logica più semplice possibile,
@@ -252,7 +252,7 @@ class ScopaEngineBase:
         for n, carta in enumerate(carte_in_mano):
             punteggi[n] = max([
                 len(presa)
-                for presa in trova_possibili_prese(carta, cartetavlolo)
+                f6dor presa in trova_possibili_prese(carta, cartetavlolo)
             ])
 
         """
@@ -261,7 +261,7 @@ class ScopaEngineBase:
         return self.carte_in_mano[indice_carta]
 
     # noinspection PyMethodMayBeStatic
-    def metodo_scegli_presa(self, possibili_prese: tuple) -> int:
+    def logica_scegli_presa(self, possibili_prese: tuple) -> int:
         return random.randrange(0, len(possibili_prese))
 
     # METODI A USO INTERNO

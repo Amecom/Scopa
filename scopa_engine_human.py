@@ -5,7 +5,7 @@ class ScopaEngineHuman(ScopaEngineBase):
 
     messaggio_inizio = "Contro un uomo una macchina non vincerà mai!"
 
-    def metodo_gioca_carta(self) -> Carta:
+    def logica_gioca_carta(self) -> Carta:
         """Sovrascrive il metodo di ScopaEngineBase
         definendo delle modalità di input fatte da un giocatore umano
         """
@@ -31,7 +31,7 @@ class ScopaEngineHuman(ScopaEngineBase):
                 return opzioni[indice_simbolo][1]
             print("\n*** scelta non valida, inserisci di nuovo ***\n")
 
-    def metodo_scegli_presa(self, possibili_prese: list) -> int:
+    def logica_scegli_presa(self, possibili_prese: list) -> int:
         """Sovrascrive il metodo di ScopaEngineBase
         definendo delle modalità di input fatte da un giocatore umano
         """
